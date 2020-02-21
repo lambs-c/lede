@@ -11,7 +11,7 @@ name: OpenWrt-CI
 
 on:
   watch:
-    [started]
+    types: [started]
   #push:
    # branches: release
   #schedule:
