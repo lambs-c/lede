@@ -10,10 +10,10 @@
 name: OpenWrt-CI
 
 on:
-  watch:
-    types: [started]
-  #push:
-   # branches: release
+  #watch:
+  #  types: [started]
+  push:
+    branches: release
   #schedule:
    # - cron: 0 20 * * *
 
@@ -56,6 +56,7 @@ jobs:
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          make menuconfig
 
       - name: Generate configuration file
         run: make defconfig
