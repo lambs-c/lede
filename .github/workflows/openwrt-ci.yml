@@ -13,7 +13,8 @@ on:
   #watch:
   #  types: [started]
   push:
-    branches: release
+    branches: 
+      - release
   #schedule:
    # - cron: 0 20 * * *
 
